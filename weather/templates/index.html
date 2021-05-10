@@ -1,0 +1,83 @@
+<body>
+<div class="container">
+    <div class="card">
+        <div class="main">
+            <h1>
+                {{ data.main.feels_like }}°
+            </h1>
+        </div>
+        <div class="other">
+            <div>Currently: {{data.weather.0.description}}</div>
+            <div>Wind: {{data.wind.speed}} MPH</div>
+        </div>
+        <div class="bottom">
+            {{ data.name }}
+        </div>
+    </div>
+    <div class="search">
+        <form>
+            <h1>
+                Search for Location
+            </h1>
+            <input type="text" name="location"/>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</div>
+</body>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+    }
+    h1 {
+        margin: 0;
+        font-size: 70px;
+    }
+    .container {
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card {
+        background-color: rgb(20,20,20);
+        color: white;
+        padding: 20px;
+        -webkit-box-shadow: 0px 0px 3px 0px #000000;
+        box-shadow: 0px 0px 3px 0px #000000;
+        margin-top: 10%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 600px;
+        font-size: 2em;
+    }
+    .other {
+        padding-left: 20px;
+        text-align: right;
+    }
+    .bottom {
+        flex: 0 0 60%;
+    }
+    .search {
+        text-align: center;
+        flex-basis: 100%;
+        margin: 20px 0;
+        font-size: 2em;
+    }
+    .search button {
+        border: solid black 1px;
+        background: black;
+        color: white;
+        font-size: inherit;
+        padding: 5px;
+    }
+    .search input {
+        font-size: inherit;
+        border: solid black 1px;
+        padding: 5px;
+    }
+</style>
